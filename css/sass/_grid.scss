@@ -8,65 +8,65 @@
 
 // Regular row
 // <div class='row'>
-// 		<div class='column large-6'></div>
-//		<div class='column large-6'></div>
+//  <div class='column large-6'></div>
+//  <div class='column large-6'></div>
 // </div>
 
 // Regular nested row
 // <div class='row'>
-// 		<div class='column large-6'></div>
-//		<div class='column large-6'>
-//			<div class='row'>
-//				<div class='column large-6'></div>
-//				<div class='column large-6'></div>
-//			</div>
-//		</div>
+//  <div class='column large-6'></div>
+//    <div class='column large-6'>
+//      <div class='row'>
+//        <div class='column large-6'></div>
+//        <div class='column large-6'></div>
+//      </div>
+//  </div>
 // </div>
 
 
 .row {
-	max-width: $row-max-width;
-	margin: 0 auto;
-	
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
-		clear: both;
-	}
+  max-width: $row-max-width;
+  margin: 0 auto;
 
-	.row {
-		margin-left: -$base-space-unit;
-		margin-right: -$base-space-unit;
-	}
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+      }
+
+      .row {
+        margin-left: -$base-space-unit;
+        margin-right: -$base-space-unit;
+      }
 }
 
 .column {
-	position: relative;
-	float: left;
-	width: 100%;
-	padding-left: $base-space-unit;
-	padding-right: $base-space-unit;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-left: $base-space-unit;
+  padding-right: $base-space-unit;
 }
 
 // Small screens for greater than 320px
 @media only screen and (min-width: 320px) {
 
-	@for $i from 1 through $total-columns {
-		.small#{-$i} {
-			width: gridCalc($i, $total-columns)
-		}
-	}
+  @for $i from 1 through $total-columns {
+    .small#{-$i} {
+      width: gridCalc($i, $total-columns)
+              }
+      }
 
 }
 
 // Large screens for greater than 768px
 @media only screen and (min-width: 768px) {
 
-	@for $i from 1 through $total-columns {
-		.large#{-$i} {
-			width: gridCalc($i, $total-columns)
-		}
-	}
+  @for $i from 1 through $total-columns {
+    .large#{-$i} {
+      width: gridCalc($i, $total-columns)
+              }
+      }
 
 }
