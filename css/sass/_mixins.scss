@@ -1,0 +1,15 @@
+// Vendor prefix mixin
+
+@mixin vendor($property, $value) {
+	-webkit-#{$property}: $value;
+	   -moz-#{$property}: $value;
+	        #{$property}: $value;
+}
+
+// A function to calculate
+// gridCalc(1, 12) => 8.33333%
+// used in the `_grid.scss`
+
+@function gridCalc($columnNumber, $totalColumns) {
+	@return percentage($columnNumber / $totalColumns); 
+}
