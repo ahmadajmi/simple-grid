@@ -1,18 +1,19 @@
 //
+//
 // Grid System
 // @require `_variables.scss`
 //
-
-//
 // The `row` will be the container of the grid units as `column`
-
-// Regular row
+//
+// Normal row:
+//
 // <div class='row'>
 //  <div class='column large-6'></div>
 //  <div class='column large-6'></div>
 // </div>
-
-// Regular nested row
+//
+// Nested row:
+//
 // <div class='row'>
 //  <div class='column large-6'></div>
 //    <div class='column large-6'>
@@ -22,7 +23,8 @@
 //      </div>
 //  </div>
 // </div>
-
+//
+//
 
 .row {
   max-width: $row-max-width;
