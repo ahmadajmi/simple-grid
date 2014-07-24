@@ -1,7 +1,6 @@
 //
 //
 // Grid System
-// @require `_variables.scss`
 //
 // The `row` will be the container of the grid units as `column`
 //
@@ -26,6 +25,33 @@
 //
 //
 
+
+
+
+$total-columns:           12 !default;
+$base-space-unit:        1em !default;
+$row-max-width:         60em !default;
+
+
+
+
+// gridCalc(1, 12) => 8.33333%
+
+@function gridCalc($columnNumber, $totalColumns) {
+  @return percentage($columnNumber / $totalColumns); 
+}
+
+
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .row {
   max-width: $row-max-width;
   margin: 0 auto;
@@ -35,12 +61,12 @@
     content: " ";
     display: table;
     clear: both;
-      }
+  }
 
-      .row {
-        margin-left: -$base-space-unit;
-        margin-right: -$base-space-unit;
-      }
+  .row {
+    margin-left: -$base-space-unit;
+    margin-right: -$base-space-unit;
+  }
 }
 
 .column {
@@ -57,8 +83,8 @@
   @for $i from 1 through $total-columns {
     .small#{-$i} {
       width: gridCalc($i, $total-columns)
-              }
-      }
+    }
+  }
 
 }
 
@@ -68,7 +94,7 @@
   @for $i from 1 through $total-columns {
     .large#{-$i} {
       width: gridCalc($i, $total-columns)
-              }
-      }
+    }
+  }
 
 }
