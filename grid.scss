@@ -1,31 +1,6 @@
 //
+// AJMI Grid System
 //
-// Grid System
-//
-// The `row` will be the container of the grid units as `column`
-//
-// Normal row:
-//
-// <div class='row'>
-//  <div class='column large-6'></div>
-//  <div class='column large-6'></div>
-// </div>
-//
-// Nested row:
-//
-// <div class='row'>
-//  <div class='column large-6'></div>
-//    <div class='column large-6'>
-//      <div class='row'>
-//        <div class='column large-6'></div>
-//        <div class='column large-6'></div>
-//      </div>
-//  </div>
-// </div>
-//
-//
-
-
 
 
 $total-columns:           12 !default;
