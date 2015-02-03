@@ -5,7 +5,7 @@ A very simple grid system inspired by Foundation.
 You can install it using bower using
 
 ```
-bower install ajmi-grid
+bower install ajmi-grid --save
 ```
 
 Or you can download it manualy and idd it to your project.
